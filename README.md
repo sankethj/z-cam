@@ -10,7 +10,7 @@
 * `pip install datetime`
 * `pip install pyfiglet`
 
-### TESTED ON :
+## TESTED ON :
 * Ubuntu
 * Kali Linux
 * Termux
@@ -26,7 +26,8 @@
 `python3 zcam.py`
 
 ## HOW TO USE
-- After running the script, you will be provided with **ngrok** tunnel link 
+- After running the script, you will be provided with **ngrok** tunnel link
+- Send that link to Client 
 - Cam Images will be stored in the directory called capture.
 - Captured Cam Image will be saved in the format of `img_<year-month-day> <time_24hr_format>.png`
 - Clients' ip address, User-Agent (system, browser) details and it will be saved in the file called `myfile.txt`
@@ -39,3 +40,6 @@
 - POST request will provide you the Clients' Base64 encoded Cam image data and it will be decrypted and stored as image file in capture directory 
 - I used pyngrok (the wrapper of ngrok), to create https tunnel.
 
+## CONTACT
+[![Telegram](https://img.shields.io/badge/TELEGRAM-CHANNEL-blue?style=for-the-badge&logo=telegram)](https://t.me/Team_ETF)
+[![Twitter](https://img.shields.io/badge/TWITTER-SANKETHZ4N-blue?style=for-the-badge&logo=twitter)](https://twitter.com/SankethZ4N)
