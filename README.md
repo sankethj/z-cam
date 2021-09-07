@@ -33,7 +33,7 @@
 - Clients' ip address, User-Agent (system, browser) details and it will be saved in the file called `myfile.txt`
 
 ## USAGE :
-`python3 zcam.py`
+* `python3 zcam.py`
 - **First time while running the tool, you need to start and test yourself. Most of time due to some problem in flask it wont take images properly. After getting tunneling link quit the program and start it again. It will work fine definitely.**
 
 ## CONCEPT
@@ -45,11 +45,26 @@
 - I used pyngrok (the wrapper of ngrok), to create https tunnel and bitly to shorten the tunneled URL
 
 ## SCREENSHOTS
-<br>
-<p align="center">
-<img width="45%" src="https://user-images.githubusercontent.com/49580304/96668024-14d6f100-130f-11eb-9b77-321909b67a8f.jpg"/>
-<img width="45%" src="https://user-images.githubusercontent.com/49580304/96668019-13a5c400-130f-11eb-9b30-c96a055b7532.jpg"/>
-</p>
+* Replace with your bitly access token here 
+
+![token](/Images/token1.jpg)
+<br></br>
+* Working of `zcam.py`
+
+![tool1](/Images/tool1.png)
+<br></br>
+* Captured Cam image files
+
+![tool2](/Images/tool2.png)
+<br></br>
+* A Sample crypto webpage which attract more client for free crypto
+
+![webpage](/Images/webpage.png)
+<br></br>
+* Files stored
+
+![files](/Images/final1.jpg) 
+<br></br>
 
 ## CONTACT
 [![Telegram](https://img.shields.io/badge/TELEGRAM-CHANNEL-blue?style=for-the-badge&logo=telegram)](https://t.me/Team_ETF)
