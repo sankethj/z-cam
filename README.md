@@ -44,9 +44,20 @@
 - POST request will provide you the Clients' Base64 encoded Cam image data and it will be decrypted and stored as image file in capture directory 
 - I used pyngrok (the wrapper of ngrok), to create https tunnel and bitly to shorten the tunneled URL
 
+## SCREENSHOTS
+<br>
+<p align="center">
+<img width="45%" src="https://user-images.githubusercontent.com/49580304/96668024-14d6f100-130f-11eb-9b77-321909b67a8f.jpg"/>
+<img width="45%" src="https://user-images.githubusercontent.com/49580304/96668019-13a5c400-130f-11eb-9b30-c96a055b7532.jpg"/>
+</p>
+
 ## CONTACT
 [![Telegram](https://img.shields.io/badge/TELEGRAM-CHANNEL-blue?style=for-the-badge&logo=telegram)](https://t.me/Team_ETF)
 [![Twitter](https://img.shields.io/badge/TWITTER-SANKETHZ4N-blue?style=for-the-badge&logo=twitter)](https://twitter.com/SankethZ4N)
+
+## REFERENCES
+- [Musa](https://stackoverflow.com/users/1353011/musa) 
+- Saycheese (thelinuxchoice)
 
 ## WARNING : 
 **This tool is only for educational purposes. If you use this tool for other purposes except educational we will not be responsible in such cases.**
