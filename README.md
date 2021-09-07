@@ -1,36 +1,40 @@
 # Z-Cam
 
-## INSTALLATION :
-* `apt-get update`
-* `apt-get upgrade`
-* Install any [Python 3.x](https://docs.python-guide.org/starting/install3/linux/) version
-* Make sure you are using **pip** of Python3
-* `pip install Flask`
-* `pip install pyngrok`
-* `pip install datetime`
-* `pip install pyfiglet`
+## FEATURES :
+* [+] Real camera hacking !
+* [+] Python compatible
+* [+] URL Shortener using bitly
+* [+] Less Size
+* [+] Updated regularly
 
 ## TESTED ON :
 * Ubuntu
 * Kali Linux
 * Termux
 
-## FEATURES :
-* [+] Real camera hacking !
-* [+] Python compatible
-* [+] URL Masking
-* [+] Less Size
-* [+] Updated regularly
-
-## USAGE :
-`python3 zcam.py`
+## INSTALLATION :
+* Install any [Python 3.x](https://docs.python-guide.org/starting/install3/linux/) version
+* Make sure you are using **pip** of Python3, to check `pip --version`
+* `git clone https://github.com/sankethj/z-cam`
+* `pip install Flask`
+* `pip install pyngrok`
+* `pip install datetime`
+* `pip install pyfiglet`
+* `pip install pyshorteners`
 
 ## HOW TO USE
-- After running the script, you will be provided with **ngrok** tunnel link
+- You need to signup in [Bitly](https://bitly.com/a/sign_up) and get your **access token** in API session
+- Now in the project directory there is a file called `tokensbitly.py`, in that replace `your_token` with your access token
+- After running the script, it will ask if you want to shorten the ngrok link type `y` or else type `n`
+- you will be provided with **ngrok** tunnel link with or without shortened depending on what yoy have choosen
 - Send that link to Client 
 - Cam Images will be stored in the directory called capture.
 - Captured Cam Image will be saved in the format of `img_<year-month-day> <time_24hr_format>.png`
 - Clients' ip address, User-Agent (system, browser) details and it will be saved in the file called `myfile.txt`
+
+## USAGE :
+`python3 zcam.py`
+- **First time while running the tool, you need to start and test yourself. Most of time due to some problem in flask it wont take images properly. After getting tunneling link quit the program and start it again. It will work fine definitely.**
 
 ## CONCEPT
 - This tool is **Python** compatible
@@ -38,8 +42,12 @@
 - If you go through the code, there is both GET and POST requests made.
 - GET request will provide you the Clients' ip address, User-Agent details and it will be saved in the file called myfile.txt
 - POST request will provide you the Clients' Base64 encoded Cam image data and it will be decrypted and stored as image file in capture directory 
-- I used pyngrok (the wrapper of ngrok), to create https tunnel.
+- I used pyngrok (the wrapper of ngrok), to create https tunnel and bitly to shorten the tunneled URL
 
 ## CONTACT
 [![Telegram](https://img.shields.io/badge/TELEGRAM-CHANNEL-blue?style=for-the-badge&logo=telegram)](https://t.me/Team_ETF)
 [![Twitter](https://img.shields.io/badge/TWITTER-SANKETHZ4N-blue?style=for-the-badge&logo=twitter)](https://twitter.com/SankethZ4N)
+
+## WARNING : 
+**This tool is only for educational purposes. If you use this tool for other purposes except educational we will not be responsible in such cases.**
+
