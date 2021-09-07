@@ -1,5 +1,12 @@
 # Z-Cam
+Hack webcam using python by sending malicious link.
 
+<p align="center">
+<a href="https://github.com/sankethj/z-cam/"><img title="Tool" src="https://img.shields.io/badge/Tool-ZCam-green.svg?style=for-the-badge"></a>
+<a><img title="Version" src="https://img.shields.io/badge/Version-2.0-green.svg?style=for-the-badge"></a>
+<a><img title="Maintainence" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge"></a>
+</p>
+  
 ## FEATURES :
 * [+] Real camera hacking !
 * [+] Python compatible
