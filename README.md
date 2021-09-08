@@ -4,13 +4,15 @@ Hack webcam using python by sending malicious link.
 <p align="center">
 <a href="https://github.com/sankethj/z-cam/"><img title="Tool" src="https://img.shields.io/badge/Tool-ZCam-green.svg?style=for-the-badge"></a>
 <a><img title="Version" src="https://img.shields.io/badge/Version-2.0-green.svg?style=for-the-badge"></a>
-<a><img title="Maintainence" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge"></a>
+<a><img title="Maintainence" src="https://img.shields.io/badge/Maintenance-Yes-green.svg?style=for-the-badge"></a>
 </p>
+
+![logo](/Images/logo.png)
   
 ## FEATURES :
 * [+] Real camera hacking !
 * [+] Python compatible
-* [+] URL Shortener using bitly
+* [+] URL Shortener using bitly   [V 2.0]
 * [+] Less Size
 * [+] Updated regularly
 
@@ -74,8 +76,8 @@ Hack webcam using python by sending malicious link.
 <br></br>
 
 ## CONTACT
-[![Telegram](https://img.shields.io/badge/TELEGRAM-CHANNEL-blue?style=for-the-badge&logo=telegram)](https://t.me/Team_ETF)
-[![Twitter](https://img.shields.io/badge/TWITTER-SANKETHZ4N-blue?style=for-the-badge&logo=twitter)](https://twitter.com/SankethZ4N)
+[![Telegram](https://img.shields.io/badge/TELEGRAM-Team_ETF-blue?style=for-the-badge&logo=telegram)](https://t.me/Team_ETF)
+[![Twitter](https://img.shields.io/badge/TWITTER-SANKETH-blue?style=for-the-badge&logo=twitter)](https://twitter.com/SankethZ4N)
 
 ## REFERENCES
 - [Musa](https://stackoverflow.com/users/1353011/musa) 
