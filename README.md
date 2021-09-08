@@ -40,6 +40,7 @@ Hack webcam using python by sending malicious link.
 - Cam Images will be stored in the directory called capture.
 - Captured Cam Image will be saved in the format of `img_<year-month-day> <time_24hr_format>.png`
 - Clients' ip address, User-Agent (system, browser) details and it will be saved in the file called `myfile.txt`
+- Make sure you use Wifi or Hotspot turned ON while using this tool.
 
 ## USAGE :
 * `python3 zcam.py`
