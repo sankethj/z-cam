@@ -1,4 +1,4 @@
-# Z-Cam
+# ZCam
 Hack webcam using python by sending malicious link.
 
 <p align="center">
