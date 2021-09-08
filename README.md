@@ -31,7 +31,7 @@ Hack webcam using python by sending malicious link.
 * `pip install pyfiglet`
 * `pip install pyshorteners`
 
-## HOW TO USE
+## HOW TO USE :
 - You need to signup in [Bitly](https://bitly.com/a/sign_up) and get your **access token** in API session
 - Now in the project directory there is a file called `tokensbitly.py`, in that replace `your_token` with your access token
 - After running the script, it will ask if you want to shorten the ngrok link type `y` or else type `n`
@@ -46,7 +46,7 @@ Hack webcam using python by sending malicious link.
 * `python3 zcam.py`
 - **First time while running the tool, you need to start and test yourself. Most of time due to some problem in flask it wont take images properly. After getting tunneling link quit the program and start it again. It will work fine definitely.**
 
-## CONCEPT
+## CONCEPT :
 - This tool is **Python** compatible
 - It uses Flask to host web-server
 - If you go through the code, there is both GET and POST requests made.
@@ -54,7 +54,7 @@ Hack webcam using python by sending malicious link.
 - POST request will provide you the Clients' Base64 encoded Cam image data and it will be decrypted and stored as image file in capture directory 
 - I used pyngrok (the wrapper of ngrok), to create https tunnel and bitly to shorten the tunneled URL
 
-## SCREENSHOTS
+## SCREENSHOTS :
 * Replace with your bitly access token here 
 
 ![token](/Images/token1.jpg)
@@ -76,11 +76,14 @@ Hack webcam using python by sending malicious link.
 ![files](/Images/final1.jpg) 
 <br></br>
 
-## CONTACT
+## YOUTUBE :
+[![YOUTUBE](/Images/imageonline-co-logoadded.png)](https://www.youtube.com/embed/oy1LLH7Wt_4)
+
+## CONTACT :
 [![Telegram](https://img.shields.io/badge/TELEGRAM-Team_ETF-blue?style=for-the-badge&logo=telegram)](https://t.me/Team_ETF)
 [![Twitter](https://img.shields.io/badge/TWITTER-SANKETH-blue?style=for-the-badge&logo=twitter)](https://twitter.com/SankethZ4N)
 
-## REFERENCES
+## REFERENCES :
 - [Musa](https://stackoverflow.com/users/1353011/musa) 
 - Saycheese (thelinuxchoice)
 
