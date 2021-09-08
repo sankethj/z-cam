@@ -10,7 +10,7 @@ Hack webcam using python by sending malicious link.
 ![logo](/Images/logo.png)
   
 ## FEATURES :
-* [+] Real camera hacking !
+* [+] Real-time Camera hacking
 * [+] Python compatible
 * [+] URL Shortener using bitly   [V 2.0]
 * [+] Less Size
