@@ -25,11 +25,7 @@ Hack webcam using python by sending malicious link.
 * Install any [Python 3.x](https://docs.python-guide.org/starting/install3/linux/) version
 * Make sure you are using **pip** of Python3, to check `pip --version`
 * `git clone https://github.com/sankethj/z-cam`
-* `pip install Flask`
-* `pip install pyngrok`
-* `pip install datetime`
-* `pip install pyfiglet`
-* `pip install pyshorteners`
+* `pip install -r requirements.txt`
 
 ## HOW TO USE :
 - You need to signup in [Bitly](https://bitly.com/a/sign_up) and get your **access token** in API session
