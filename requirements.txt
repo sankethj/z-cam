@@ -1,0 +1,5 @@
+pyngrok==5.1.0
+requests==2.22.0
+Flask==2.0.1
+pyshorteners==1.0.1
+pyfiglet==0.8.post1
