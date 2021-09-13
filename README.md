@@ -87,3 +87,5 @@ Hack webcam using python by sending malicious link.
 ## WARNING : 
 **This tool is only for educational purposes. If you use this tool for other purposes except educational we will not be responsible in such cases.**
 
+## DONATIONS :
+- We don't ask much, if possible feed stray animals in your free time. 
