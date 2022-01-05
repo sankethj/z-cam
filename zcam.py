@@ -107,8 +107,8 @@ try:
     # flask
     @app.route("/",methods=['POST','GET'])
     def home():
-        bot.remove_webhook()
-        bot.set_webhook(url='https://test-bot-2022-z4n.herokuapp.com/' + API_KEY)
+        #bot.remove_webhook()
+        #bot.set_webhook(url='https://test-bot-2022-z4n.herokuapp.com/' + API_KEY)
         # get request
         if request.method == 'GET':
             now = str(datetime.now())
