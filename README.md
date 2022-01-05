@@ -16,20 +16,24 @@ Hack webcam using python by sending malicious link.
 * [+] Updated regularly
 * [+] URL Shortener using bitly   [V 2.0]
 * [+] Telegram Support  [V 3.0]
-* [+] Encryption [V 4.0]
-* [-] Multiple templates [V 5.0]        (coming soon)
-* [-] Enhanced template trick [V 6.0]        (coming soon)
+* [+] Heroku deploy [V 3.1]  -----> (Beta testing)
+* [-] Multiple templates [V 4.0]        (coming soon)
+* [-] Enhanced template trick [V 5.0]        (coming soon)
 
 ## TESTED ON :
 * Ubuntu
 * Kali Linux
 * Termux
 
-## INSTALLATION :
+## INSTALLATION for TERMINAL:
 * Install any [Python 3.x](https://docs.python-guide.org/starting/install3/linux/) version
 * Make sure you are using **pip** of Python3, to check `pip --version`
 * `git clone https://github.com/sankethj/z-cam`
 * `pip install -r requirements.txt`
+
+## INSTALLATION for HEROKU:
+* Deploy on Heroku
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://github.com/sankethj/z-cam)
 
 ## HOW TO USE :
 - You need to signup in [Bitly](https://bitly.com/a/sign_up) and get your **access token** in API session
