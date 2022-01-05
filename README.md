@@ -12,9 +12,13 @@ Hack webcam using python by sending malicious link.
 ## FEATURES :
 * [+] Real-time Camera hacking
 * [+] Python compatible
-* [+] URL Shortener using bitly   [V 2.0]
 * [+] Less Size
 * [+] Updated regularly
+* [+] URL Shortener using bitly   [V 2.0]
+* [+] Telegram Support  [V 3.0]
+* [+] Encryption [V 4.0]
+* [-] Multiple templates [V 5.0]        (coming soon)
+* [-] Enhanced template trick [V 6.0]        (coming soon)
 
 ## TESTED ON :
 * Ubuntu
