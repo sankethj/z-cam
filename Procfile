@@ -1,1 +1,1 @@
-worker: python zcam.py
+worker: python3 zcam.py
