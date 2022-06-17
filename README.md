@@ -51,7 +51,9 @@ Hack webcam using python by sending malicious link.
 
 ## USAGE :
 * `python3 zcam.py`
+* Now tool will ask if you need any special assistance or not choose your accordingly needs. If you wishes to use any then make sure you have already added your own respective token in `constraints.py`. Watch video for more usage info.
 - **First time while running the tool, you need to start and test yourself. Most of time due to some problem in flask it wont take images properly. After getting tunneling link quit the program and start it again. It will work fine definitely.**
+* I have also added `zbot.py` file, which you can deploy on any platform to host your bot (like deploying in Heroku).
 
 ## CONCEPT :
 - For detailed explanation check on [blogger](https://zansecurity.blogspot.com/2022/02/the-first-python-compatible-camera.html)

