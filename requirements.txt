@@ -1,0 +1,6 @@
+Flask==2.0.1
+pyfiglet==0.8.post1
+pyngrok==5.1.0
+pyshorteners==1.0.1
+pyTelegramBotAPI==4.2.2
+requests==2.22.0
